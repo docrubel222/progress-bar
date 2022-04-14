@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: Arial;}
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+        }
+        .main{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        h1{
+            font-size: 30px;
+            color: #fff;
+            line-height: 60px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #fff;
+        }
+        .all-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .progress{
+            width: 80%;
+            height: 15px;
+            border-radius: 10px;
+            background: #fff;
+            margin: 10px 0px;
+            position: relative;
+            text-align: right;
+        }
+        ::before{
+            position: absolute;
+            border-radius: 10px;
+            width: 0%;
+            height: 100%;
+            left: 0;
+        }
+        .html::before{
+            content: '';
+            background: #D84924;
+            animation: html 10s linear  infinite;
+        }
+        @keyframes html {
+            0%{width: 0%;}
+            40%{width: 0%;}
+            50%{width: 95%;}
+            100%{width: 95%;}
+        }
+        .css::before{
+            content: '';
+            background: #2449D8;
+            animation: css 10s linear  infinite;
+        }
+        @keyframes css {
+            0%{width: 0%;}
+            40%{width: 0%;}
+            50%{width: 90%;}
+            100%{width: 90%;}
+        }
+        .JavaScript::before{
+            content: '';
+            background: #EECB01;
+            animation: JavaScript 10s linear  infinite;
+        }
+        @keyframes JavaScript {
+            0%{width: 0%;}
+            40%{width: 0%;}
+            50%{width: 80%;}
+            100%{width: 80%;}
+        }
+        .python::before{
+            content: '';
+            background: #336FA1;
+            animation: python 10s linear  infinite;
+        }
+        @keyframes python {
+            0%{width: 0%;}
+            40%{width: 0%;}
+            50%{width: 60%;}
+            100%{width: 60%;}
+        }
+        .react::before{
+            content: '';
+            background: #5CCFEE;
+            animation: react 10s linear  infinite;
+        }
+        @keyframes react {
+            0%{width: 0%;}
+            40%{width: 0%;}
+            50%{width: 85%;}
+            100%{width: 85%;}
+        }
+        ::after{
+            position: absolute;
+            font-size: 10px;
+            color: #fff;
+            line-height: 15px;
+        }
+        .html::after{
+            content: '95%';
+            left: 80%;
+        }
+        .css::after{
+            content: '90%';
+            left: 75%;
+        }
+        .JavaScript::after{
+            content: '80%';
+            left: 65%;
+        }
+        .python::after{
+            content: '60%';
+            left: 45%;
+        }
+        .react::after{
+            content: '85%';
+            left: 70%;
+        }
+        .txt{
+            width: 10%;
+            text-align: right;
+            font-size: 14px; 
+            color: #fff;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Progress Bar</h1>
+        <!-- HTML -->
+        <div class="all-wrapper">
+            <div class="html progress"></div> 
+            <div class="txt">HTML</div>
+        </div>
+        <!-- CSS -->
+        <div class="all-wrapper">
+            <div class="css progress"></div>
+            <div class="txt">CSS</div>
+        </div>
+        <!-- JavaScript -->
+        <div class="all-wrapper">
+            <div class="JavaScript progress"></div>
+            <div class="txt">JavaScript</div>
+        </div>
+        <!-- Python -->
+        <div class="all-wrapper">
+            <div class="python progress"></div>
+            <div class="txt">Python</div>
+        </div>
+        <!-- React -->
+        <div class="all-wrapper">
+            <div class="react progress"></div>
+            <div class="txt">React</div>
+        </div>
+    </div>   
+</body>
+</html>
